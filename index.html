@@ -14,8 +14,7 @@
         altura = parseFloat(altura)
         peso = parseInt(peso)
         altura /= 100
-        altura += altura
-        var imc = peso / altura
+        var imc = peso / (altura * altura)
         imc = imc.toFixed(2)
         if (imc < 16) {
             document.write(nome + ' Seu IMC atual:' + imc + ' sendo classificado como: Abaixo do peso muito grave')
